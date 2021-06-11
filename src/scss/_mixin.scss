@@ -1,0 +1,60 @@
+@import "variables";
+
+@mixin font-face($font-name, $path, $weight, $style) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path +".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+/* ===== Usage ===== */
+//@include font-face(Roboto, "./assets/Roboto", normal, normal);
+
+@mixin mobile {
+  @media only screen and (min-width: $breakpoint-576 * 1px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: $breakpoint-768 * 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $breakpoint-992 * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $breakpoint-1200 * 1px) {
+    @content;
+  }
+}
+/* ===== Usage ===== */
+//h1 {
+//  font-size: 10px;
+//
+//  @include tablet {
+//    font-size: 12px;
+//  }
+//
+//  @include desktop {
+//    font-size: 20px;
+//  }
+//}
+
+@mixin title($title, $font-size) {
+  content: $title;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: $font-size;
+  color: $title-after-color;
+  letter-spacing: -8px;
+}

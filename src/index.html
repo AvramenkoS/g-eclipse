@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eclipse Network</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!--<div class="container"-->
+<!--     data-0="transform:translateX(0%)"-->
+<!--     data-100="transform:translateX(-100%)"-->
+<!--     data-200="transform:translateX(-200%)"-->
+<!--     data-300="transform:translateX(-300%)">-->
+@@include('_header.html')
+
+<!--<div class="wrapper"-->
+<!--     data-smooth-scrolling="on"-->
+<!--     data-0="transform:translateX(0%); transition:all .3s linear"-->
+<!--     data-100="transform:translateX(-100%); transition:all .3s linear"-->
+<!--     data-200="transform:translateX(-200%); transition:all .3s linear"-->
+<!--     data-300="transform:translateX(-300%); transition:all .3s linear">-->
+<div class="wrapper"
+     data-0="transform:translateX(0%); transition:all .2s ease-out"
+     data-100="transform:translateX(-100%); transition:all .2s ease-out"
+     data-200="transform:translateX(-200%); transition:all .2s ease-out">
+    @@include('_first.html')
+    @@include('_second.html')
+    @@include('_third.html')
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/skrollr.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
